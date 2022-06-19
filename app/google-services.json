@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "299349818538",
+    "project_id": "vaccination-a29c1",
+    "storage_bucket": "vaccination-a29c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299349818538:android:0f9d715acb487a359324d3",
+        "android_client_info": {
+          "package_name": "com.hany.vaccinationsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299349818538-7ljmgqvqlqusrj9lpuc1mcc4usl63hga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoXtQGSx6qgFAvJ8ulaBvWYEzAKch3Wug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299349818538-7ljmgqvqlqusrj9lpuc1mcc4usl63hga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
