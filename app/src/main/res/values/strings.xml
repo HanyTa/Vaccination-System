@@ -12,4 +12,12 @@
     <string name="username_or_email">Username or Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="empty_email">please enter your email or username</string>
+    <string name="invalid_email">you should enter a valid email</string>
+    <string name="empty_password">you should enter your password</string>
+    <string name="minimum_eight">Minimum 8 Character Password</string>
+    <string name="contain_1_uppercase">Must Contain 1 Upper-case Character</string>
+    <string name="contain_1_lowercase">Must Contain 1 Lower-case Character</string>
+    <string name="contain_1_special">Must Contain 1 Special Character (@#$%^+=)</string>
+    <string name="login_success">You are logged in successfully</string>
 </resources>

@@ -30,9 +30,10 @@ class LoginActivity : AppCompatActivity() {
         loginViewModelFactory = LoginViewModelFactory(application)
         viewModel =ViewModelProvider(this,loginViewModelFactory)[LoginViewModel::class.java]
 
-        val navController = findNavController(R.id.nav_host_fragment_content_login)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        viewModel.pageLoad()
+//        val navController = findNavController(R.id.nav_host_fragment_content_login)
+//        appBarConfiguration = AppBarConfiguration(navController.graph)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.email.addTextChangedListener {
             viewModel.onEmailChanged(it.toString())
@@ -46,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
             viewModel.onLoginClicked()
         }
 
-        viewModel.failedMessage().observe(this, Observer {
+        viewModel.failedMessage().observe(this, {
             Snackbar.make(
                 binding.root,
                 it,
@@ -54,7 +55,38 @@ class LoginActivity : AppCompatActivity() {
             ).show()
         })
 
-        viewModel.successMessage().observe(this, Observer {
+        viewModel.successMessage().observe(this, {
+            Snackbar.make(
+                binding.root,
+                it,
+                Snackbar.LENGTH_LONG
+            ).show()
+        })
+
+        viewModel.emptyEmailMessage().observe(this, {
+            Snackbar.make(
+                binding.root,
+                it,
+                Snackbar.LENGTH_LONG
+            ).show()
+        })
+
+        viewModel.emptyPasswordMessage().observe(this, {
+            Snackbar.make(
+                binding.root,
+                it,
+                Snackbar.LENGTH_LONG
+            ).show()
+        })
+        viewModel.errorEmailMessage().observe(this, {
+            Snackbar.make(
+                binding.root,
+                it,
+                Snackbar.LENGTH_LONG
+            ).show()
+        })
+
+        viewModel.errorPasswordMessage().observe(this, {
             Snackbar.make(
                 binding.root,
                 it,
